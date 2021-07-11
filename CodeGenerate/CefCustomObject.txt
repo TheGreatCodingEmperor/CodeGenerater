@@ -1,0 +1,10 @@
+sayHello(){return this.cefCustomObject.sayHello();}
+showDevTools(){return this.cefCustomObject.showDevTools();}
+refreshWindow(){return this.cefCustomObject.refreshWindow();}
+selectedFolderPath(){return this.cefCustomObject.selectedFolderPath();}
+selectedFilePath(){return this.cefCustomObject.selectedFilePath();}
+doSomeThing(name,action){return this.cefCustomObject.doSomeThing(name,action);}
+getType(){return this.cefCustomObject.getType();}
+toString(){return this.cefCustomObject.toString();}
+equals(obj){return this.cefCustomObject.equals(obj);}
+getHashCode(){return this.cefCustomObject.getHashCode();}
