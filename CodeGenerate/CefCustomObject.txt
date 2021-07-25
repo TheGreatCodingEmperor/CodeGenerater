@@ -1,10 +1,15 @@
-sayHello(){return this.cefCustomObject.sayHello();}
-showDevTools(){return this.cefCustomObject.showDevTools();}
-refreshWindow(){return this.cefCustomObject.refreshWindow();}
-selectedFolderPath(){return this.cefCustomObject.selectedFolderPath();}
-selectedFilePath(){return this.cefCustomObject.selectedFilePath();}
-doSomeThing(name,action){return this.cefCustomObject.doSomeThing(name,action);}
-getType(){return this.cefCustomObject.getType();}
-toString(){return this.cefCustomObject.toString();}
-equals(obj){return this.cefCustomObject.equals(obj);}
-getHashCode(){return this.cefCustomObject.getHashCode();}
+sayHello(){ if(this.cefCustomObject) return this.cefCustomObject.sayHello();}
+showDevTools(){ if(this.cefCustomObject) return this.cefCustomObject.showDevTools();}
+refreshWindow(){ if(this.cefCustomObject) return this.cefCustomObject.refreshWindow();}
+selectedFolderPath(){ if(this.cefCustomObject) return this.cefCustomObject.selectedFolderPath();}
+selectedFilePath(){ if(this.cefCustomObject) return this.cefCustomObject.selectedFilePath();}
+readFileAsText(path){ if(this.cefCustomObject) return this.cefCustomObject.readFileAsText(path);}
+writeFileToPath(path,content){ if(this.cefCustomObject) return this.cefCustomObject.writeFileToPath(path,content);}
+createDirectory(path){ if(this.cefCustomObject) return this.cefCustomObject.createDirectory(path);}
+openFolder(path){ if(this.cefCustomObject) return this.cefCustomObject.openFolder(path);}
+doSomeThing(name,action){ if(this.cefCustomObject) return this.cefCustomObject.doSomeThing(name,action);}
+api(){ if(this.cefCustomObject) return this.cefCustomObject.api();}
+getType(){ if(this.cefCustomObject) return this.cefCustomObject.getType();}
+toString(){ if(this.cefCustomObject) return this.cefCustomObject.toString();}
+equals(obj){ if(this.cefCustomObject) return this.cefCustomObject.equals(obj);}
+getHashCode(){ if(this.cefCustomObject) return this.cefCustomObject.getHashCode();}

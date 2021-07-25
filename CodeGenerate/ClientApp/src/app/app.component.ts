@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CefCustomObjectService } from './core/cef-custom-object.service';
+import { map } from 'rxjs/operators';
+import { CefExampleComponent } from './modules/generater/components/cef-example/cef-example.component';
+
+export interface IActionResult{
+  StatusCode:number;
+  Value:any;
+}
 
 @Component({
   selector: 'app-root',
@@ -9,12 +16,17 @@ import { CefCustomObjectService } from './core/cef-custom-object.service';
 })
 export class AppComponent implements OnInit {
   title = 'code-generater';
+  modes=[
+    { label:'---',value:'' },
+    { label:'example',value:'/generater/example' },
+    { label:'dotnet',value:'/generater/dotnet' }
+  ]
   constructor(
     private router: Router,
     private cefCustomObject: CefCustomObjectService
   ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     document.querySelector('body').addEventListener('keydown', (e) => {
       var keyCode = e.keyCode || e.which;
       var keys = e.key;
@@ -30,7 +42,10 @@ export class AppComponent implements OnInit {
           break;
         }
         case 13: {
-          this.cefCustomObject.sayHello();
+          // this.cefCustomObject.showDevTools();
+          // this.cefCustomObject.api().pipe(map((result:IActionResult)=>{
+
+          // }));
           break;
         }
         default: {
@@ -42,5 +57,9 @@ export class AppComponent implements OnInit {
 
   goToGenerater() {
     this.router.navigate(['/generater']);
+  }
+
+  goToPage(event){
+    this.router.navigate([event.value]);
   }
 }

@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Data Source=../localDB.db" Microsoft.EntityFrameworkCore.Sqlite -o Auto -d -t First

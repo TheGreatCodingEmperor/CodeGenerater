@@ -1,0 +1,16 @@
+<div class="p-fluid">
+  <div class="p-field">
+    <label for="firstname1">Firstname</label>
+    <input id="firstname1" type="text" pInputText />
+  </div>
+  <div class="p-field">
+    <label for="filePath">filePath</label>
+    <button (click)="selectFile($event)">filePath</button>
+    <input [(ngModel)]="filePath" id="filePath" type="text" pInputText />
+  </div>
+  <div class="p-field">
+    <label for="folderPath">folderPath</label>
+    <button (click)="selectFolder($event)">folderPath</button>
+    <input [(ngModel)]="folderPath" id="folderPath" type="text" pInputText />
+  </div>
+</div>

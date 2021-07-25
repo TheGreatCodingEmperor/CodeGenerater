@@ -49,7 +49,7 @@ namespace CodeGenerate
                     // spa.UseAngularCliServer (npmScript: "start-es6");
                     // spa.Options.StartupTimeout = TimeSpan.FromSeconds (120); // Increase the timeout if angular app is taking longer to startup
 
-                    spa.UseProxyToSpaDevelopmentServer ("http://localhost:4300"); // Use this instead to use the angular cli server
+                    spa.UseProxyToSpaDevelopmentServer ("http://localhost:4200"); // Use this instead to use the angular cli server
                 }
                 else
                 {
