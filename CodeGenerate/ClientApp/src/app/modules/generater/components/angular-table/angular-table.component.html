@@ -1,0 +1,44 @@
+<div class="p-grid p-fluid">
+  <div class="p-col-3">
+    <button
+      (click)="selectFile($event)"
+      label="Auto Generate Class"
+      pButton
+    ></button>
+  </div>
+  <div class="p-col-9">
+    <input [(ngModel)]="filePath" id="filePath" type="text" pInputText />
+  </div>
+
+  <div class="p-col-3">
+    <button (click)="selectFolder($event)" label="output path" pButton></button>
+  </div>
+  <div class="p-col-9">
+    <input [(ngModel)]="projectFolderPath" id="folderPath" type="text" pInputText />
+  </div>
+  <div class="p-col-12">
+    <label for="">Generate Options</label>
+    <p-multiSelect
+      [options]="generateOptions"
+      [(ngModel)]="selectedOptions"
+      optionLabel="name"
+      optionValue="value"
+    ></p-multiSelect>
+  </div>
+
+  
+
+  <div class="p-field p-col-12">
+    <label for="className">Class Name</label>
+    <input [(ngModel)]="className" id="className" type="text" pInputText />
+  </div>
+  <div class="p-col-12">
+    <p-progressBar [value]="progress"></p-progressBar>
+  </div>
+  <div  class="p-col-9">
+    <button (click)="onAction()" label="Action" pButton></button>
+  </div>
+  <div class="p-col-3">
+    <button *ngIf="progress" (click)="view()" label="View" pButton></button>
+  </div>
+</div>

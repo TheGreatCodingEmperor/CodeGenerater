@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   modes=[
     { label:'---',value:'' },
     { label:'example',value:'/generater/example' },
-    { label:'dotnet',value:'/generater/dotnet' }
+    { label:'dotnet',value:'/generater/dotnet' },
+    { label:'ng-table',value:'/generater/ng-table' }
   ]
   constructor(
     private router: Router,
